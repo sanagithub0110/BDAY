@@ -3,10 +3,10 @@ import { Play } from "lucide-react";
 
 // Placeholder video URLs - USER WILL REPLACE THESE
 const videos = [
-  { id: 1, title: "What mesmerizing meant to me", url: "/public/song.mp4", thumbnail: "/public/thumb1.jpg"},
-  { id: 2, title: "What peace meant to me", url: "/public/kanmani.mp4", thumbnail: "/public/thumb2.jpg" },
-  { id: 3, title: "Can't get enough of this", url: "/public/dooron.mp4", thumbnail: "/public/thumb3.jpg" },
-  { id: 4, title: "Favorite Singer", url: "/public/yay.mp4", thumbnail: "/public/thumb4.jpg" },
+  { id: 1, title: "What mesmerizing meant to me", url: "/song.mp4", thumbnail: "/thumb1.jpg"},
+  { id: 2, title: "What peace meant to me", url: "/kanmani.mp4", thumbnail: "/thumb2.jpg" },
+  { id: 3, title: "Can't get enough of this", url:"/dooron.mp4", thumbnail: "/thumb3.jpg" },
+  { id: 4, title: "Favorite Singer", url: "/yay.mp4", thumbnail: "/thumb4.jpg" },
 ];
 
 export const VideoPlayer = () => {
