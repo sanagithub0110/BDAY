@@ -2,14 +2,14 @@ import { useState, useEffect } from "react";
 
 // Placeholder images - USER WILL REPLACE THESE
 const photos = [
-  "/public/fav.jpg",
-  "/public/best.jpg",
-  "/public/billu.jpg",
-  "/public/spidey.jpg",
-  "/public/chomu.jpg",
-  "/public/cutey.jpg",
-  "/public/jaw.jpg",
-  "/public/mirror.jpg",
+  "/fav.jpg",
+  "/best.jpg",
+  "/billu.jpg",
+  "/spidey.jpg",
+  "/chomu.jpg",
+  "/cutey.jpg",
+  "/jaw.jpg",
+  "/mirror.jpg",
 ];
 
 export const PhotoGallery = () => {
