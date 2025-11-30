@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Soft Emotional Theme with Light Marvel Accents */
+    --background: 240 15% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 240 10% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 240 12% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary - Soft Navy Blue */
+    --primary: 220 35% 45%;
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 220 50% 60%;
+
+    /* Secondary - Warm Deep Red */
+    --secondary: 0 45% 45%;
+    --secondary-foreground: 0 0% 100%;
+    --secondary-glow: 0 55% 60%;
+
+    /* Muted - Soft Gray */
+    --muted: 240 10% 18%;
+    --muted-foreground: 240 5% 60%;
+
+    /* Accent - Soft Metallic */
+    --accent: 210 25% 50%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 60% 50%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 240 10% 20%;
+    --input: 240 12% 15%;
+    --ring: 220 35% 45%;
+
+    --radius: 0.75rem;
+
+    /* Soft Emotional Variables */
+    --soft-gradient: linear-gradient(135deg, hsl(220 35% 45% / 0.3) 0%, hsl(0 45% 45% / 0.3) 100%);
+    --warm-gradient: linear-gradient(180deg, hsl(240 10% 12%) 0%, hsl(240 15% 8%) 100%);
+    --glow-soft-blue: 0 0 40px hsl(220 50% 60% / 0.2);
+    --glow-soft-red: 0 0 40px hsl(0 55% 60% / 0.2);
+    --glow-ambient: 0 0 60px hsl(210 25% 50% / 0.15);
+    
+    /* Typography */
+    --font-elegant: 'Playfair Display', serif;
+    --font-body: 'Montserrat', sans-serif;
+    --font-handwritten: 'Dancing Script', cursive;
+  }
+}
+
+/* Custom Animations */
+@keyframes soft-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--primary-glow) / 0.2),
+                0 0 40px hsl(var(--primary-glow) / 0.1);
+  }
+  50% {
+    box-shadow: 0 0 30px hsl(var(--primary-glow) / 0.3),
+                0 0 60px hsl(var(--primary-glow) / 0.15);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.5;
+    transform: translateX(-100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes gentle-zoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes particles {
+  0% {
+    opacity: 0;
+    transform: translateY(0) translateX(0);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100px) translateX(20px);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3 {
+    font-family: var(--font-elegant);
+    font-weight: 600;
+  }
+
+  h4, h5, h6 {
+    font-family: var(--font-body);
+    font-weight: 500;
+  }
+
+  .handwritten {
+    font-family: var(--font-handwritten);
+  }
+
+  .soft-glow {
+    animation: soft-glow 3s ease-in-out infinite;
+  }
+
+  .gentle-fade {
+    animation: fade-in 1s ease-out forwards;
+  }
+
+  .floating {
+    animation: float 3s ease-in-out infinite;
+  }
+}
